@@ -1,5 +1,8 @@
 <?php
 session_start();
+require_once 'model/Db.php';
+require_once 'model/Director.php';
+require_once 'controller/Nav_barCtrl.php';
 $site= $_SERVER['REQUEST_URI'];
 $page= substr( $site, 29 );
 $oeuvre = ["Jurassic-Park.php", "Eragon.php", "Harry-Potter.php"];
@@ -20,6 +23,7 @@ $userCompte= ["connexion.php","inscription.php" ];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script  src="Function.js"></script>
 </head>
   <body class="back_plane">
     <div class="leading">
@@ -34,16 +38,15 @@ $userCompte= ["connexion.php","inscription.php" ];
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="<?php if($page=="accueil.php"){echo "nav-link active";} else {echo "nav-link";} ?>" aria-current="page" href="accueil.php">Accueil</a>
+              <a class="<?php if($page=="accueil.php"){echo "nav-link active";} else {echo "nav-link";} ?>" aria-current="page" href="index.php">Accueil</a>
             </li>
             <li class="nav-item dropdown">
               <a class="<?php if (in_array($page, $oeuvre, $page==$oeuvre)){echo "nav-link active dropdown-toggle";} else {echo "nav-link dropdown-toggle";} ?>" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Film et livre</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Harry-Potter.php">Harry-Potter</a></li>
-                <li><a class="dropdown-item" href="Jurassic-Park.php">Jurassic-Park</a></li>
-                <li><a class="dropdown-item" href="Eragon.php">Eragon</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item disabled " href="#">à venir</a></li>
+                <?php foreach($filmList as $filmTitle) { ?>
+                <li><a class="dropdown-item" href="comparateur.php?id=<?php echo $filmTitle->id; ?>"><?php  echo $filmTitle->movie_title; ?></a></li>
+
+                <?php } ?>
               </ul>
             </li>
             <li class="nav-item">

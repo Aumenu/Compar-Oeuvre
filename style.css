@@ -262,16 +262,16 @@ html {
     position: relative;
     margin-bottom: 50px;
   }
-  .timeline ul li.from_book {
+  .timeline ul li:nth-child(odd) {
     float: left;
-    clear: both;
-    transform: translateX(-45px);
+    clear: right;
+    transform: translateX(-30px);
     border-radius: 20px 0px 20px 20px;
   }
-  .timeline ul li.from_movie {
+  .timeline ul li:nth-child(even) {
     float: right;
-    clear: both;
-    transform: translateX(15px);
+    clear: left;
+    transform: translateX(30px);
     border-radius: 0px 20px 20px 20px;
   }
   .timeline ul li::before {
@@ -284,13 +284,13 @@ html {
     top: 0px;
     
   }
-  .timeline ul li.from_book::before {
+  .timeline ul li:nth-child(odd)::before  {
     transform: translate(50%, -50%);
-    right: -30px;
+    right: -15px;
   }
-  .timeline ul li.from_movie::before {
+  .timeline ul li:nth-child(even)::before {
     transform: translate(-50%, -50%);
-    left: -30px;
+    left: -45px;
   }
   .timeline-content .date {
     position: absolute;
@@ -546,6 +546,38 @@ margin-bottom: 30px;
 .my_compte_title{
   text-align: center;
   color: white;
+}
+
+/*formulaire d'ajout d'oeuvre*/
+#titre_ajout_oeuvre{
+  color: white;
+}
+
+.ajout-oeuvre {
+  color: white;
+  margin-top: 10px;
+}
+.ajout-oeuvre label{
+  width: 240px;
+  display: inline-block;
+  text-align: right;
+  
+  
+}
+
+.ajout-oeuvre input{
+  margin-top: 10px;
+  
+  
+}
+
+.ajout-oeuvre .split{
+  margin-top: 10px;
+}
+
+
+#container{
+  margin-top: 50px;
 }
 
 

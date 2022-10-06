@@ -1,6 +1,6 @@
 <?php
 require 'commun/header.php';
-require 'model/Db.php';
+require_once 'model/Db.php';
 require 'controller/InscriptionCtrl.php';
 
 ?>

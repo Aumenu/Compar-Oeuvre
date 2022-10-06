@@ -12,7 +12,17 @@ class Db {
             /** @var PDO $pdo  
              * Instance de l'objet PDO
              */
+            /*mode serveur local*/
             $this->pdo = new PDO('mysql:host=localhost;dbname=compar-oeuvre;charset=utf8', 'root');
+            
+            /*mode serveur internet
+            $this->pdo = new PDO('mysql:host=localhost;dbname=aqevfkan_compar-oeuvre
+            ;charset=utf8','MVWZNiSm4vhDdo5RttMc', 'aqevfkan_Blackirex');
+            ini_set('display_errors', 1);
+            ini_set('display_startup_errors', 1);
+            error_reporting(E_ALL);
+            */
+
             /**
              * PDO::ATTR_ERRMODE et PDO::ERRMODE_EXCEPTION permettent de spécifier à PDO que l'on veux des Exceptions à la place des erreurs PHP. Cela va permettre de les attraper dans le catch.
              */
