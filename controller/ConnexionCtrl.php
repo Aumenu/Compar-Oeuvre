@@ -1,6 +1,6 @@
 <?php
 
-require 'model/Users.php';
+require_once 'model/Users.php';
 
 $errors = [];
 $success = false;
@@ -34,8 +34,10 @@ if(isset($_POST['connexion'])) {
             $errors[] = "Les informations de connexion sont incorrectes";
         }
         else {
-            
+            $user = $user->userByPseudonyme();
+            $_SESSION['id'] = $user->id;
             $_SESSION['pseudonyme'] = $user->pseudonyme;
+            $_SESSION['role'] = $user->role;
             header('Location: mon-compte.php');
         }
         

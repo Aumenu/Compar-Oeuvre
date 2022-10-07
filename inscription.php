@@ -5,9 +5,8 @@ require 'controller/InscriptionCtrl.php';
 
 ?>
 
-
+<main>
     <div class="inscription_body">
-    
         <div class="registration_form">
             <form class="registration" action="inscription.php" method="POST">
                 <h2>Inscription</h2>
@@ -41,7 +40,8 @@ require 'controller/InscriptionCtrl.php';
             </form>
         </div>
 </div>
+</main>
+<?php require_once 'commun/footer.php'; ?>
 
 
-
-    </body>
+    

@@ -8,6 +8,7 @@ class Users extends Db
     public string $pseudonyme;
     public string $password;
     public string $mail;
+    public int $role;
     public array $error;
 
     /** Setter for the private password property
@@ -21,13 +22,14 @@ class Users extends Db
 
     public function createUser()
     {
-        $query = 'INSERT INTO `user` (`pseudonyme`, `password`, `email`) VALUES 
-        (:pseudonyme, :password, :mail)';
+        $query = 'INSERT INTO `user` (`pseudonyme`, `password`, `email`, `role`) VALUES 
+        (:pseudonyme, :password, :mail, :role)';
         $stmt = $this->pdo->prepare($query);
         $stmt->bindParam(':pseudonyme', $this->pseudonyme, PDO::PARAM_STR);
         $stmt->bindParam(':password', $this->password, PDO::PARAM_STR);
         $this->password = password_hash($this->password, PASSWORD_DEFAULT);
         $stmt->bindParam(':mail', $this->mail, PDO::PARAM_STR);
+        $stmt->bindParam(':role', $this->role, PDO::PARAM_INT);
         $stmt->execute();
 
         
@@ -78,5 +80,31 @@ class Users extends Db
         }
         return password_verify($this->password, $result->password);
     }
+
+    public function userByPseudonyme() {
+        $query = "SELECT * FROM user WHERE pseudonyme = :pseudonyme";
+
+        $stmt = $this->pdo->prepare($query);
+
+        $stmt->bindParam(":pseudonyme", $this->pseudonyme, PDO::PARAM_STR);
+
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Users');
+        $result = $stmt->fetch();
+        return $result;
+
+    }
+
+
+
+
+    public function modifyPassword() {
+        $query = 'UPDATE `user` SET `password` = :password WHERE `id`= :id';
+        $stmt = $this->pdo->prepare($query);
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        $stmt->bindParam(":password", $this->password, PDO::PARAM_STR);
+        $stmt->bindParam(":id", $this->id, PDO::PARAM_INT);
+        $stmt->execute();
+    } 
 
 }

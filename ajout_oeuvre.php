@@ -1,10 +1,14 @@
 <?php
 
 require 'commun/header.php';
-require 'model/Db.php';
-require 'controller/ajout-oeuvreCtrl.php';
+require_once 'model/Db.php';
+require_once 'controller/ajout-oeuvreCtrl.php';
+if (empty($_SESSION['pseudonyme'])){ 
+    header('Location: inscription.php');
+    }
 
 ?>
+<main>
 <h2 class="my_compte_title">Ajout d'une oeuvre</h2>
 <?php if (!empty($errors)) {
     foreach ($errors as $error) { ?>
@@ -43,9 +47,9 @@ require 'controller/ajout-oeuvreCtrl.php';
         <input type="number" name="book_page">
     </div>
     <div id="store_list_book">
-        <label for="store_link">lien vers site de commerce :</label>
+        <label for="store_link">Lien vers site de commerce :</label>
         <input type="text" name="store_name_book[]" placeholder="ex : Fnac">
-        <input type="url" name="store_link_book[]">
+        <input type="url" name="store_link_book[]" placeholder="https//lafnac.com">
         <button type="button" onclick="createInputBook()">+</button> <button type="button" onclick="deleteInputBook()">-</button>
     </div>
 
@@ -76,9 +80,9 @@ require 'controller/ajout-oeuvreCtrl.php';
         <input type="time" name="movie_duration" id="movie_duration" min="01:00" max="05:00" required>
     </div>
     <div id="store_list_movie">
-        <label for="store_link">lien vers site de commerce :</label>
+        <label for="store_link">Lien vers site de commerce :</label>
         <input type="text" name="store_name_movie[]" placeholder="ex : Fnac">
-        <input type="url" name="store_link_movie[]">
+        <input type="url" name="store_link_movie[]" placeholder="https//lafnac.com">
         <button type="button" onclick="createInputMovie()">+</button> <button type="button" onclick="deleteInputMovie()">-</button>
     </div>
 
@@ -93,3 +97,5 @@ require 'controller/ajout-oeuvreCtrl.php';
 
         <input type="submit" value="Envoyer" name="envoyer" />
 </form>
+</main>
+<?php require_once 'commun/footer.php'; ?>

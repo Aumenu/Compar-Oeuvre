@@ -1,15 +1,21 @@
 function createInputBook() {
     var store_list = document.getElementById("store_list_book");
     var div_store_book = document.createElement("div");
+    var label_store_book = document.createElement("label");
     var input_text = document.createElement("input");
     var input_url = document.createElement("input");
     div_store_book.setAttribute("name", "div_store_book");
+    label_store_book.setAttribute("for", 'store_name_book[]');
+    label_store_book.setAttribute("class", 'label_store_book');
+    label_store_book.innerHTML = ("Lien vers site de commerce : ");
     input_text.setAttribute("type", "text");
     input_text.setAttribute("name", "store_name_book[]");
     input_text.setAttribute("placeholder", "ex : Fnac");
     input_url.setAttribute("type", "url");
     input_url.setAttribute("name", "store_link_book[]");
-    store_list.appendChild(div_store_book)
+    input_url.setAttribute("placeholder", "ex : htttps//lafnac.com")
+    store_list.appendChild(div_store_book);
+    div_store_book.appendChild(label_store_book);
     div_store_book.appendChild(input_text);
     div_store_book.appendChild(input_url);
     store_list.innerHTML;
@@ -19,15 +25,21 @@ function createInputBook() {
 function createInputMovie() {
     var store_list_movie = document.getElementById("store_list_movie");
     var div_store_movie = document.createElement("div");
+    var label_store_movie = document.createElement("label");
     var input_text = document.createElement("input");
     var input_url = document.createElement("input");
     div_store_movie.setAttribute("name", "div_store_movie");
+    label_store_movie.setAttribute("for", 'store_name_movie[]');
+    label_store_movie.setAttribute("class", 'label_store_movie');
+    label_store_movie.innerHTML = ("Lien vers site de commerce : ");
     input_text.setAttribute("type", "text");
     input_text.setAttribute("name", "store_name_movie[]");
     input_text.setAttribute("placeholder", "ex : Fnac");
     input_url.setAttribute("type", "url");
     input_url.setAttribute("name", "store_link_movie[]");
+    input_url.setAttribute("placeholder", "ex : htttps//lafnac.com")
     store_list_movie.appendChild(div_store_movie)
+    div_store_movie.appendChild(label_store_movie);
     div_store_movie.appendChild(input_text);
     div_store_movie.appendChild(input_url);
     store_list.innerHTML;
@@ -36,8 +48,11 @@ function createInputMovie() {
 function deleteInputBook() {
     const input_text = document.getElementsByName("store_name_book[]");
     const input_url = document.getElementsByName("store_link_book[]");
+    const label_store_book = document.getElementsByClassName("label_store_book");
+    const last_label_store_book = label_store_book[label_store_book.length - 1];
     const last_input_text = input_text[input_text.length - 1];
     const last_input_url = input_url[input_url.length - 1];
+    last_label_store_book.remove();
     last_input_text.remove();
     last_input_url.remove();
 }
@@ -45,72 +60,16 @@ function deleteInputBook() {
 function deleteInputMovie() {
     const input_text = document.getElementsByName("store_name_movie[]");
     const input_url = document.getElementsByName("store_link_movie[]");
+    const label_store_movie = document.getElementsByClassName("label_store_movie");
+    const last_label_store_movie = label_store_movie[label_store_movie.length - 1];
     const last_input_text = input_text[input_text.length - 1];
     const last_input_url = input_url[input_url.length - 1];
+    last_label_store_movie.remove();
     last_input_text.remove();
     last_input_url.remove();
 }
 
-function createTextAreaDifferenceMovieBook() {
-    var div_timeline = document.getElementById("timeline_content");
-    var div_difference = document.createElement("div");
-    var div_book_difference = document.createElement("div");
-    var label_input_book = document.createElement("label");
-    var label_input_time = document.createElement("label");
-    var input_time_landmark = document.createElement("input")
-    var input_book_difference = document.createElement("textarea");
-    var div_movie_difference = document.createElement("div");
-    var label_input_movie = document.createElement("label");
-    var input_movie_difference = document.createElement("textarea");
-    div_difference.setAttribute("class", "difference_between_movie_and_book");
-    div_book_difference.setAttribute("class", "difference_book");
-    label_input_time.setAttribute("for", 'time_landmark[]');
-    label_input_time.setAttribute("class", 'label_time_landmark');
-    label_input_time.innerHTML = ("Repère de temps : ");
-    input_time_landmark.setAttribute("type", "time")
-    input_time_landmark.setAttribute("name", "time_landmark[]")
-    label_input_book.setAttribute("for", 'difference_in_the_book[]');
-    label_input_book.setAttribute("class", 'label_book_difference');
-    label_input_book.innerHTML = ("Différence dans le livre : ");
-    input_book_difference.setAttribute("name", "difference_in_the_book[]");
-    div_movie_difference.setAttribute("class", "difference_movie");
-    label_input_movie.setAttribute("for", 'difference_in_the_movie[]');
-    label_input_movie.setAttribute("class", 'label_movie_difference');
-    label_input_movie.innerHTML = ("Différence dans le film : ");
-    input_movie_difference.setAttribute("name", "difference_in_the_movie[]");
-    div_timeline.appendChild(div_difference);
-    div_difference.appendChild(label_input_time);
-    div_difference.appendChild(input_time_landmark);
-    div_book_difference.appendChild(label_input_book);
-    div_book_difference.appendChild(input_book_difference);
-    div_difference.appendChild(div_book_difference);
-    div_difference.appendChild(div_movie_difference);
-    div_movie_difference.appendChild(label_input_movie);
-    div_movie_difference.appendChild(input_movie_difference);
-    div_difference.innerHTML;
-}
 
-function deleteTextAreaDifferenceMovieBook() {
-    const input_time_landmark = document.getElementsByName("time_landmark[]");
-    const input_book = document.getElementsByName("difference_in_the_book[]");
-    const input_movie = document.getElementsByName("difference_in_the_movie[]");
-    const label_time_landmark = document.getElementsByClassName("label_time_landmark");
-    const label_book_difference = document.getElementsByClassName("label_book_difference");
-    const label_movie_difference = document.getElementsByClassName("label_movie_difference");
-    const last_label_time = label_time_landmark[label_time_landmark.length - 1];
-    const last_input_time = input_time_landmark[input_time_landmark.length - 1];
-    const last_label_book = label_book_difference[label_book_difference.length - 1];
-    const last_label_movie = label_movie_difference[label_movie_difference.length - 1];
-    const last_input_book = input_book[input_book.length - 1];
-    const last_input_movie = input_movie[input_movie.length - 1];
-    last_input_book.remove();
-    last_input_movie.remove();
-    last_label_book.remove();
-    last_label_movie.remove();
-    last_label_time.remove();
-    last_input_time.remove();
-
-}
 
 
 
@@ -224,4 +183,11 @@ function deleteComponentTimeLine() {
     last_class_container.remove();
     last_time_container.remove();
 
+}
+
+
+
+function spoiler(){
+    var timeline_spoiler = document.getElementById("timeline");
+    timeline_spoiler.classList.toggle("spoiler");
 }

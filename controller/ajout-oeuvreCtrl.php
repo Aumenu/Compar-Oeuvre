@@ -1,10 +1,10 @@
 <?php
 
-require 'model/Authors.php';
-require 'model/Director.php';
-require 'model/Book_store.php';
-require 'model/Movie_Store.php';
-require 'model/Comparaison.php';
+require_once 'model/Authors.php';
+require_once 'model/Director.php';
+require_once 'model/Book_store.php';
+require_once 'model/Movie_Store.php';
+require_once 'model/Comparaison.php';
 
 $errors = [];
 $success = false;

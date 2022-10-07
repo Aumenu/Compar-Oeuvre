@@ -27,6 +27,24 @@ $livre = $author->AuthorPage($comparaisonList[0]->id_book);
 $bookstoreList = $bookstore-> directorbookStore($livre->id);
 }
 
+function changeDate(string $date, string $formatInput, string $formatOutput): string
+{
+    $d = DateTimeImmutable::createFromFormat($formatInput, $date);
+    return $d->format($formatOutput);
+}
+
+
+  
+    /*
+if (isset($_GET['idDelete'])) {
+    var_dump($_GET['idDelete']);
+    $appointments->deleteAppointment(($_GET['idDeleteConfirmation']));
+    header("Location: liste-rendezvous.php");
+    */
+
+
+
+
 
 
 

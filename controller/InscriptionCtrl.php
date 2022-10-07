@@ -52,6 +52,7 @@ if(isset($_POST['inscription'])) {
 
     if(empty($errors)) {
         // Appel de la méthode d'insertion du User
+        $user->role = 0;
         $user->createUser();
         $success = true;
     }

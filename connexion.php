@@ -5,6 +5,7 @@ require_once 'model/Db.php';
 require 'controller/ConnexionCtrl.php';
 
 ?>
+<main>
 <div class="connexion_form">
     
         <?php if (!empty($errors)) {
@@ -36,3 +37,5 @@ require 'controller/ConnexionCtrl.php';
 </form>
 </div>
 </div>
+</main>
+<?php require_once 'commun/footer.php'; ?>

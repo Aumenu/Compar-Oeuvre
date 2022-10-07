@@ -53,4 +53,11 @@ public function AuthorPage($id) {
     $result = $stmt->fetch(PDO::FETCH_OBJ);
     return $result;
 }
+
+public function authorDelete($id) {
+    $query = 'DELETE FROM `author` WHERE `id`=:id';
+    $stmt = $this->pdo->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+}
 }

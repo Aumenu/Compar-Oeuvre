@@ -61,8 +61,8 @@ $userCompte= ["connexion.php","inscription.php" ];
                 echo "<li><a class=\"dropdown-item\" href=\"mon-compte.php\">Mon compte</a></li>" ;} ?>
                 <?php if (empty($_SESSION['pseudonyme'])) { 
                  echo "<li><a class=\"dropdown-item\" href=\"inscription.php\">Inscription</a></li>" ;}
-                 else { echo "<li><a class=\"dropdown-item\" href=\"deconnexion.php\">Deconnexion</a></li>",
-                  "<li><a class=\"dropdown-item\" href=\"inscription.php\">Inscription</a></li>" ;
+                 else { echo "<li><a class=\"dropdown-item\" href=\"deconnexion.php\">Deconnexion</a></li>";
+                   
 
                  } ?>
               </ul>
