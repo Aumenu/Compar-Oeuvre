@@ -8,6 +8,21 @@
   color: white;
 }
 
+.text_body_index {
+  text-align: center;
+  color: black;
+  background-color: rgb(221, 219, 219);
+  margin-top: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  margin: 10%;
+  
+
+
+}
+
+
 .leading {
     background-color: rgb(31, 29, 29);
     height: 60px;

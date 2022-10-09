@@ -31,8 +31,6 @@ class Users extends Db
         $stmt->bindParam(':mail', $this->mail, PDO::PARAM_STR);
         $stmt->bindParam(':role', $this->role, PDO::PARAM_INT);
         $stmt->execute();
-
-        
     }
 
   /** Verifies if a user with the same username already exists in the database

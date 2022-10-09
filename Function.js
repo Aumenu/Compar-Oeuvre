@@ -70,9 +70,6 @@ function deleteInputMovie() {
 }
 
 
-
-
-
 function createComponentsTimeLine() {
     var div_timeline_content = document.getElementById("timeline_content");
     var div_container = document.createElement("div");
