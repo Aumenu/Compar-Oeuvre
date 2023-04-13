@@ -1,0 +1,850 @@
+.siteName {
+    text-align: center;
+    color: ghostwhite;
+}
+
+.text_body {
+  text-align: center;
+  color: white;
+}
+
+.text_body_index {
+  text-align: center;
+  color: black;
+  background-color: rgb(221, 219, 219);
+  margin-top: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  margin: 10%; 
+}
+
+
+.carousel-item {
+
+  text-align: center;
+}
+
+.leading {
+    background-color: rgb(31, 29, 29);
+    height: 60px;
+}
+
+.back_plane {
+    background-color: rgb(55, 52, 56);
+    
+}
+
+.connexion_body{
+  background-color:  rgb(55, 52, 56);
+}
+/* début page d'inscription*/
+
+form h2{
+  text-align: center;
+}
+
+/*début formulaire d'inscription*/
+
+.registration_form{
+  
+  background-color:  rgb(55, 52, 56);
+  color: white;
+  margin: 5px;
+  padding: 50px;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+
+
+.registration_form .data_field input{
+  margin-top: 5px;
+  border: 1px solid black;
+ padding: 10px 20px;
+  outline-color: black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 650px;
+  height: 50px;
+  margin-left: 30%;
+}
+
+.registration_form .validation_form input{
+  margin-top: 10px;
+  background-color:  rgb(55, 52, 56);
+  color: white;
+  font-size: 30px;
+  border: solid;
+  border-color: white;
+  padding: 20px 200px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin-left: 33%;
+  margin-top: 20px;
+}
+
+.registration_form .validation_form input:hover{
+  transform: scale(1.05);
+  background-color:  white;
+  color: black;
+}
+
+
+
+.registration_form label{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 30%;
+  
+}
+@media screen and (max-width:920px) {
+  .registration_form{
+    margin-top: 70px;
+    
+  }
+
+  .registration_form .data_field input{
+    margin-top: 5px;
+    border: 1px solid black;
+    padding: 5%;
+    outline-color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 240px;
+    height: 50px;
+    margin-left: 5%;
+  }
+  .registration_form .validation_form input{
+    margin-top: 10px;
+    background-color:  rgb(55, 52, 56);
+    color: white;
+    font-size: 30px;
+    border: solid;
+    border-color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin-left: 2%;
+    margin-top: 20px;
+  }
+
+  .registration_form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 5%;
+    
+  }
+  
+  .registration_form .validation_form input:hover{
+    transform: scale(1.05);
+    background-color:  white;
+    color: black;
+  }
+
+  
+}
+
+/*fin formulaire d'inscription*/
+
+/*fin de la page d'inscription*/
+
+/*debut formulaire de connexion*/
+.connexion_form{
+  color: white;
+}
+
+
+
+.connexion_form .data_field input{
+    margin-top: 5px;
+    border: 1px solid black;
+    padding: 5%;
+    outline-color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 240px;
+    height: 50px;
+    margin-left: 5%;
+  }
+  .connexion_form .validation_form input{
+    margin-top: 10px;
+    background-color:  rgb(55, 52, 56);
+    color: white;
+    font-size: 30px;
+    border: solid;
+    border-color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin-left: 2%;
+    margin-top: 20px;
+  }
+
+  .connexion_form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 5%;
+    
+  }
+  
+  .connexion_form .validation_form input:hover{
+    transform: scale(1.05);
+    background-color:  white;
+    color: black;
+  }
+
+  
+/*fin du formulaire d'inscription*/
+
+/*debut style pour la timeline*/
+#div_spoiler{
+  text-align: center;
+}
+
+#button_spoiler{
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  color: #1e1f22;
+  font-size: 15px;
+  border: SOLID;
+  border-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+}
+
+#button_spoiler:hover{
+  transform: scale(1.05);
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: rgb(42, 40, 40);
+}
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #1e1f22;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+ul .différence_book_and_movie_spoiler p{
+  color: #1e1f22;
+}
+
+ul .missing_from_movie_spoiler p{
+  color: #1e1f22;
+}
+
+ul .missing_from_book_spoiler p{
+  color: #1e1f22;
+}
+
+  
+#timeline.spoiler ul .missing_from_movie_spoiler p{
+  color: white;
+}
+#timeline.spoiler ul .différence_book_and_movie_spoiler p{
+  color: white;
+}
+#timeline.spoiler ul .missing_from_book_spoiler p{
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+    
+  }
+  .timeline ul li:nth-child(odd)::before  {
+    transform: translate(50%, -50%);
+    right: -15px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -45px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: rgba(236, 225, 225, 0.951);
+  }
+}
+/*fin de la timeline*/
+
+/*formulaire de contact*/
+.contact_form {
+  background-color: gray;
+  margin: 0px;
+  margin-bottom: 100%;
+  padding: 15px;
+  position: absolute;
+  top: 30%;
+  left: 38%;
+}
+
+form h1{
+  font-size: 20px;
+}
+
+.split {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.foot_form_contact {
+  text-align : center;
+  
+}
+
+.area_form_contact{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.box{
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.area_form_left .box input{
+  margin-top: 5px;
+  padding: 10px 5px 10px 30px;
+  border: 1px solid black;
+  outline-color: black;
+  border-radius: 5px;
+}
+
+.area_form_left .box i{
+  position: absolute;
+  left: 0;
+  top: 35px;
+  padding: 9px 8px;
+}
+
+.area_form_right{
+  margin-left: 40px;
+}
+
+
+.area_form_right .box{
+  height: 100%;
+  
+}
+
+.area_form_right .box textarea{
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+}
+
+.foot_form_contact input{
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  color: #1e1f22;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.foot_form_contact input:hover{
+  transform: scale(1.05);
+}
+
+@media screen and (max-width:920px) {
+  .area_form_right{
+    margin-left: 0px;
+  }
+
+  .contact_form {
+    background-color: gray;
+    left: 25px;
+    right: 20px;
+    margin-top: 70px;
+
+  }
+}
+
+/*fin du formulaire de contact*/
+
+/*bandeau d'information livre et film*/
+.information_banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: white;
+}
+
+.number_of_pages{
+margin-bottom: 30px;
+}
+
+.shop{
+  margin: 5px;
+}
+
+/*presentation du livre*/
+
+.book_presentation{
+  
+  background-color:rgb(154, 152, 152) ;
+  padding: 2em 3em;
+  margin-bottom: 30px;
+}
+.book_presentation h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.book_information{
+ margin-left: 350px;
+
+}
+
+.book_cover img{
+  width: 300px;
+  height: 350px;
+  float: left;
+}
+
+.between_two{
+ padding: 60px; 
+}
+
+/*presentation du film*/
+.movie_presentation{
+  background-color:rgb(154, 152, 152) ;
+  padding: 2em 3em;
+  margin-bottom: 30px;
+}
+.movie_presentation h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movie_information{
+ margin-left: 350px;
+
+}
+
+.movie_cover img{
+  width: 300px;
+  height: 350px;
+  float: left;
+}
+
+
+
+@media screen and (max-width:920px) {
+  .information_banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+  }
+
+  .book_presentation{
+  
+    background-color:gray ;
+    
+    margin-bottom: 30px;
+  }
+  .book_presentation h3{
+    text-align: center;
+    margin-bottom: 20px;
+   
+  }
+  
+  .book_information{
+   margin-left: 50px;
+   margin-top: 20px;
+  
+  }
+  .book_cover img{
+    width: 300px;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+
+  /*presentation du film*/
+.movie_presentation{
+  background-color:gray ;
+  
+  margin-bottom: 30px;
+}
+.movie_presentation h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.movie_information{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.movie_cover img{
+  width: 300px;
+  height: 350px;
+  margin-bottom: 20px;
+  
+}
+}
+
+
+
+/*formulaire d'ajout d'oeuvre*/
+#titre_ajout_oeuvre{
+  color: white;
+}
+
+.ajout-oeuvre {
+  color: white;
+  margin-top: 10px;
+}
+.ajout-oeuvre label{
+  width: 240px;
+  display: inline-block;
+  text-align: right;
+  
+  
+}
+
+.ajout-oeuvre input{
+  margin-top: 10px;
+  
+  
+}
+
+.ajout-oeuvre .split{
+  margin-top: 10px;
+}
+
+
+#container{
+  margin-top: 50px;
+}
+
+#timeline_content select {
+  margin-top: 10px;
+  
+}
+
+#timeline_content label {
+  width: 240px;
+  display: inline-block;
+  text-align: right;
+}
+
+#timeline_content textarea {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+  
+}
+
+@media screen and (max-width:920px) {
+  #titre_ajout_oeuvre{
+    color: white;
+    margin-left: 25%;
+  }
+  
+  
+  .ajout-oeuvre {
+    color: white;
+    margin-top: 10px;
+    
+  }
+  .ajout-oeuvre label{
+    width: 240px;
+    display: inline-block;
+    text-align: right;
+    
+    
+  }
+  
+  .ajout-oeuvre input{
+    margin-top: 10px;
+    margin-left: 25%;
+    
+    
+  }
+  
+  .ajout-oeuvre .split{
+    margin-top: 10px;
+  }
+  
+  
+  #container{
+    margin-top: 50px;
+  }
+  
+  #timeline_content select {
+    margin-top: 10px;
+    
+  }
+  
+  #timeline_content label {
+    width: 240px;
+    display: inline-block;
+    text-align: right;
+  }
+  
+  #timeline_content textarea {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 2px solid black;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    height: 72%;
+    margin-left: 25%;
+    
+  }
+}
+/*fin du formulaire d'jout d'oeuvre*/
+/*footer*/
+main{
+  min-height: 100vh;
+   position:relative;
+   padding-bottom:100px;
+}
+
+footer {
+  background-color:  rgb(31, 29, 29);
+  width:100%;
+  height:40px;
+  text-align: center;
+ 
+
+}
+
+footer a {
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+   
+}
+
+/*page mon compte*/
+
+.my_compte_title{
+  text-align: center;
+  color: white;
+}
+
+.admin_table {
+  
+  border: solid;
+  border-color: black;
+  color: black;
+  background-color: rgb(191, 181, 181);
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+ 
+}
+
+.admin_table td {
+  color: black;
+  border: solid;
+  text-align: center;
+}
+
+.div_user_compte{
+ margin-left: 38%;
+ margin-top: 10%;
+}
+
+
+.div_user_compte a:hover{
+color: black;
+
+}
+.user_compte{
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  color: #1e1f22;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin-right: 10px;
+}
+
+.user_compte:hover{
+  transform: scale(1.05);
+}
+
+/*changement de mot de passe*/
+.registration_form .validation_form_password input{
+  margin-top: 10px;
+  background-color:  rgb(55, 52, 56);
+  color: white;
+  font-size: 20px;
+  border: solid;
+  border-color: white; 
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin-left: 30%;
+  margin-top: 20px;
+  
+}
+
+.registration_form .validation_form_password input:hover{
+  transform: scale(1.05);
+  background-color:  white;
+  color: black;
+}
+
+@media screen and (max-width:920px) {
+
+  .registration_form .validation_form_password input{
+    margin-top: 10px;
+    background-color:  rgb(55, 52, 56);
+    color: white;
+    font-size: 20px;
+    border: solid;
+    border-color: white; 
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin-left: 5%;
+    margin-top: 20px;
+    
+  }
+  
+  .registration_form .validation_form_password input:hover{
+    transform: scale(1.05);
+    background-color:  white;
+    color: black;
+  }
+}
